@@ -1,0 +1,154 @@
+﻿@model IEnumerable<Menu>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="menu-container">
+    <div class="menu-banner-container">
+        <div class="menu-banner position-relative">
+            <h1 class="position-absolute top-50 start-50 translate-middle">
+                Order Online
+            </h1>
+        </div>
+    </div>
+
+    <div class="menu-dishes-container">
+        
+    </div>
+</div>
+@*=================================*@
+<div class="album bg-body-tertiary">
+    <div class="container">
+        <div class="starter-container single-container">
+            <h2>
+                Starter
+            </h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                @foreach (var item in Model)
+                {
+                    @if (item.Category == "Starter")
+                    {
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="dish-image bd-placeholder-img card-img-top" src="~/img/DishImage/@(item.DishAbbreviation).jpeg"/>
+                            </div>
+
+                            <div class="dish-details-container">
+                                <h3>
+                                    @item.DishName
+                                </h3>
+                                <p>
+                                    ₱@(item.Price).00
+                                </p>
+                            </div>
+
+                            <div class="addToCart-container">
+                                <a class="add-button" type="button" asp-action="AddToCart" asp-controller="OrderOnline" asp-route-id="@item.Id">Add to cart</a>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+        <div class="starter-container single-container">
+            <h2>
+                Main
+            </h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                @foreach (var item in Model)
+                {
+                    @if (item.Category == "Main")
+                    {
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="dish-image bd-placeholder-img card-img-top" src="~/img/DishImage/@(item.DishAbbreviation).jpeg" />
+                            </div>
+
+                            <div class="dish-details-container">
+                                <h3>
+                                    @item.DishName
+                                </h3>
+                                <p>
+                                    ₱@(item.Price).00
+                                </p>
+                            </div>
+
+                            <div class="addToCart-container">
+                                <a class="add-button" type="button" asp-action="AddToCart" asp-controller="OrderOnline" asp-route-id="@item.Id">Add to cart</a>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+        <div class="starter-container single-container">
+            <h2 id="sideDish-width">
+                Side Dish
+            </h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                @foreach (var item in Model)
+                {
+                    @if (item.Category == "SideDish")
+                    {
+                        <div class="col">
+                            <div class="">
+                                <img class="dish-image bd-placeholder-img card-img-top" src="~/img/DishImage/@(item.DishAbbreviation).jpeg" />
+                            </div>
+
+                            <div class="dish-details-container">
+                                <h3>
+                                    @item.DishName
+                                </h3>
+                                <p>
+                                    ₱@(item.Price).00
+                                </p>
+                            </div>
+
+                            <div class="addToCart-container">
+                                <a class="add-button" type="button" asp-action="AddToCart" asp-controller="OrderOnline" asp-route-id="@item.Id">Add to cart</a>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+        <div class="starter-container single-container">
+            <h2 id="dessert-width">
+                Dessert
+            </h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                @foreach (var item in Model)
+                {
+                    @if (item.Category == "Dessert")
+                    {
+                        <div class="col">
+                            <div class="card shadow-sm">
+                                <img class="dish-image bd-placeholder-img card-img-top" src="~/img/DishImage/@(item.DishAbbreviation).jpeg" />
+                            </div>
+
+                            <div class="dish-details-container">
+                                <h3>
+                                    @item.DishName
+                                </h3>
+                                <p>
+                                    ₱@(item.Price).00
+                                </p>
+                            </div>
+
+                            <div class="addToCart-container">
+                                <a class="add-button" asp-action="AddToCart" asp-controller="OrderOnline" asp-route-id="@item.Id">Add to cart</a>
+
+                            </div>
+
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>

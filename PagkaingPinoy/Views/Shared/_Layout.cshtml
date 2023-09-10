@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Pagkaing Pinoy</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/PagkaingPinoy.styles.css" asp-append-version="true" />
+</head>
+<body class="hide-scroll-bar prevent-select">
+    <header>
+        <nav class="navbar-container navbar navbar-expand-sm">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pagkaing Pinoy</a>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+
+                        @*Home Section*@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        @*Menu Section*@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Menu" asp-action="Index">Menu</a>
+                        </li>
+
+                        @*Order History Section*@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="OrderHistory" asp-action="Index">Order History</a>
+                        </li>
+
+                        @*Contact Section*@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                        </li>
+
+                        @*Order Online Section*@
+                        <li class="nav-item nav-link-orderOnline">
+                            <a class="nav-link nav-link-orderOnline" asp-area="" asp-controller="OrderOnline" asp-action="Index">Order Now</a>
+                        </li>
+
+                        @*Cart Section*@
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Cart" asp-action="Index">Cart</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="">
+        <main role="main" class="">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,542 @@
+
+/* ==================== RESET ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.hideScrollBar {
+    overflow-y: scroll;
+}
+
+.hideScrollBar::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --ten: #C16F2D;
+    --thirthy: #FFFAF4;
+    --sixthy: #3D1F16;
+    --background: #271F1F;
+}
+
+/* =============================================== */
+
+
+/* ================= Header Part ================= */
+
+.navbar-brand {
+    color: black;
+    font-size: 40px;
+    margin: 0 100px 0 200px;
+    width: 20%;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+.navbar-brand:hover {
+    color: black;
+}
+
+
+.navbar-nav{
+    gap: 30px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    font-size: 14px;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover{
+    color: var(--ten);
+}
+
+.nav-link-orderOnline {
+    border: 1px solid var(--ten);
+    color: var(--ten);
+    letter-spacing: 3px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-link-orderOnline:hover {
+    color: var(--thirthy);
+    background-color: var(--ten);
+}
+
+/* =============================================== */
+
+/* =============== Welcome Section =============== */
+
+.carousel-image {
+    width: 100vw;
+    height: 90vh;
+    filter:brightness(50%);
+}
+
+.carousel-caption{
+    width: 60%;
+    padding: 0;
+}
+
+.carousel-caption h1 {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    font-size: 80px;
+    padding: 10px;
+}
+
+.carousel-caption p{
+    font-size: 20px;
+    font-weight: lighter;
+    word-spacing: 3px;
+    letter-spacing: 2px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.carousel-button {
+    text-decoration: none;
+    color: var(--thirthy);
+    background-color: var(--ten);
+    max-width: 20%;
+    padding: 15px 20px;
+    margin-inline: auto;
+    font-size: 18px;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    word-spacing: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+.carousel-button:hover{
+    background-color: var(--thirthy);
+    color: var(--sixthy);
+}
+
+/* =============================================== */
+
+/* ================ Menu Section ================= */
+.menu-banner-container {
+    height: 45vh;
+    background-color: var(--background);
+}
+.menu-banner {
+    height: 70%;
+    background: linear-gradient( to top, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 50% ), 
+        url(/img/pinoy-food-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.menu-banner h1{
+    margin: 0;
+    margin-inline: auto;
+    padding: 20px 15px;
+    color: var(--thirthy);
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--thirthy);
+}
+
+.menu-dishes-container{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.single-container{
+    margin: 0 40px;
+}
+
+.single-container h2 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin: 50px auto 30px;
+    padding: 0 15px 20px;
+    width: 10%;
+    border-bottom: 2px solid var(--ten);
+}
+
+.categories-cotainer{
+    justify-content: center;
+}
+
+.dish-container{
+    border-bottom: 1px dashed var(--ten);
+    width: 35%;
+    margin: 50px auto 0;
+}
+
+.dish-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 0 0 10px;
+    padding: 5px 0;
+}
+
+.dish-price {
+    font-size: 16px;
+    font-weight: 700;
+    float: right;
+}
+
+.dish-description {
+    font-size: 16px;
+    color: var(--sixthy);
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+/* =============================================== */
+
+/* ============= Order Online Section ============ */
+.dish-image {
+    height: 500px;
+}
+
+.album {
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+#sideDish-width{
+    width: 13%;
+}
+
+.dish-details-container{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.dish-details-container h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.dish-details-container p{
+    font-size: 18px;
+    color: var(--ten);
+}
+
+.addToCart-container{
+    text-align: center;
+}
+.add-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    text-decoration: none;
+    color: var(--ten);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    word-spacing: 1px;
+    letter-spacing: 0.5px;
+    padding: 10px 25px;
+    border: 2px solid var(--ten);
+    transition: 0.3s ease-in-out;
+}
+
+.add-button:hover{
+    background-color: var(--ten);
+    color: var(--thirthy);
+}
+
+
+/* =============================================== */
+
+/* =========== Modal Add To Cart Section ========= */
+
+.form-class {
+    width: 100vw;
+    height: 95vh;
+    background: linear-gradient( to top, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 50% ), url(/img/pinoy-food-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-container {
+    width: 30%;
+    padding: 50px;
+    background: linear-gradient( to top, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 50% );
+    border-radius: 10px;
+    color: var(--thirthy);
+    position: relative;
+}
+
+.form-container label {
+    font-size: 22px;
+}
+.form-container input{
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--ten);
+    outline: none;
+    color: var(--ten);
+    padding: 10px 5px;
+    font-size: 18px;
+}
+
+.flex input{
+    display: inline-block;
+}
+/* =============================================== */
+/* ================= Cart Section ================ */
+
+.button-submit, .update-cart-button {
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    background-color: var(--ten);
+    color: var(--thirthy);
+    font-weight: bold;
+    border: 2px solid var(--ten);
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.button-submit:hover, .update-cart-button:hover{
+    background-color: transparent;
+    color: var(--ten);
+    border: 2px solid var(--ten);
+}
+
+.button-submit:active, .update-cart-button:active{
+    background-color: var(--thirthy);
+    color: var(--ten);
+}
+
+.form-container-cart {
+    width: 50%;
+    margin-inline: auto;
+    border-bottom: 1px dashed var(--ten);
+    padding-bottom: 50px;
+}
+.cart-container {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cart-container h1{
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    margin: 40px auto;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.table-container, th, td {
+    border: none;
+}
+
+.table-container, .check-out-container {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.table-container th, .check-out-container th{
+    background-color: #F8F8F8;
+    padding: 9px 12px;
+    font-size: 18px;
+}
+
+.table-container td, .check-out-container td{
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 15px;
+    font-size: 18px;
+}
+
+.product-name{
+    color: var(--ten);
+}
+
+.product-quantity .quantity input {
+    border: 2px solid #D4D4D4;
+    text-align: center;
+    color: var(--sixthy);
+    font-size: 16px;
+    padding: 8px 12px;
+}
+
+.update-button-container{
+    text-align: center;
+}
+
+.update-cart-button{
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.delete-button-container {
+    text-align: right;
+}
+
+.delete-cart-button {
+    text-decoration: none;
+    color: red;
+    font-weight: bolder;
+    margin: 0 15PX 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.delete-cart-button:hover{
+    color: red;
+    transform: rotate(180deg);
+}
+
+.checkOut-container {
+    text-align: center;
+    width: 30%;
+    margin-inline: auto;
+}
+.checkOut-container h2 {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    margin: 40px auto;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.checkOut-container th{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.check-out-button{
+    text-decoration: none;
+}
+
+
+/* Contact */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.contact-container{
+    margin-bottom: 50px;
+}
+
+.contact-banner-container {
+    height: 45vh;
+    background-color: var(--background);
+    margin-bottom: 50px;
+}
+.contact-banner {
+    height: 70%;
+    background: linear-gradient( to top, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.6) 50% ), url(/img/pinoy-food-2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact-banner h1{
+    margin: 0;
+    margin-inline: auto;
+    padding: 20px 15px;
+    color: var(--thirthy);
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    border-bottom: 1px solid var(--thirthy);
+}
+
+.get-in-touch {
+    grid-column: 3/6;
+    grid-row: 1;
+}
+
+.get-in-touch h3, .location-businessHours h3 {
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    padding: 20px 0 12px;
+}
+
+.get-in-touch .note {
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: lighter;
+}
+
+.getInTouch-form label, .getInTouch-form input, .getInTouch-form textarea {
+    display: block;
+}
+
+.getInTouch-form label {
+    font-size: 20px;
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.getInTouch-form input, .getInTouch-form textarea{
+    padding: 8px 12px;
+    margin-bottom: 20px;
+}
+
+.get-in-touch textarea {
+    resize: none;
+}
+
+.location-businessHours {
+    grid-column: 6/8;
+    grid-row: 1;
+    font-size: 18px;
+    word-spacing: 2px;
+}
+
+.message-button {
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 0;
+    letter-spacing: 2px;
+    word-spacing: 1px;
+    background-color: var(--ten);
+    color: var(--thirthy);
+    font-weight: bold;
+    border: 2px solid var(--ten);
+    padding: 10px 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.message-button:hover{
+    background-color: transparent;
+    color: var(--ten);
+    border: 2px solid var(--ten);
+}
+
+.message-button:active{
+    background-color: var(--thirthy);
+    color: var(--ten);

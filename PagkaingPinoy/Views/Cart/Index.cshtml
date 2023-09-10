@@ -1,0 +1,96 @@
+﻿@model IEnumerable<Cart>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int total = 0;
+    foreach(var subtotal in Model)
+    {
+        total = total + subtotal.Subtotal;
+    }
+}
+
+<div class="cart-container">
+    <h1>
+        Cart
+    </h1>
+    <div class="cart-table">
+        @if (Model.Count() == 0)
+        {
+            <h1>
+                Your cart is currently empty.
+            </h1>
+        }
+        else
+        {
+            <form class="form-container-cart" method="post" asp-action="UpdateCart">
+                <table class="table table-container">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Subtotal</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="delete-button-container">
+                                        <a class="delete-cart-button" type="button" asp-action="DeleteItem" asp-controller="Cart" asp-route-id="@item.Id">X</a>
+                                    </div>
+                                </td>
+                                <td class="product-name">
+                                    <a>@item.DishName</a>
+                                </td>
+                                <td class="product-price">
+                                    <a>₱@item.Price</a>
+                                </td>
+                                <td class="product-quantity">
+                                    <a>@item.Quantity</a>
+                                </td>
+                                <td class="product-subtotal">
+                                    <a>₱@item.Subtotal</a>
+                                </td>
+                                <td>
+                                    <div class="update-button-container">
+                                        <a class="update-cart-button" type="button" asp-action="ModifyItem" asp-controller="Cart" asp-route-id="@item.Id">Modify Item</a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </form>
+        }
+
+        @if (Model.Count() != 0)
+        {
+            <div class="checkOut-container">
+                <h2>
+                    Cart Totals
+                </h2>
+                <table class="check-out-container table">
+                    <tbody>
+                        <tr class="cart-subtotal">
+                            <th>Subtotal</th>
+                            <td>₱@total</td>
+                        </tr>
+
+                        <tr class="order-total">
+                            <th>Total</th>
+                            <td style="font-weight: bold;">₱@total</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="update-button-container">
+                    <a type="button" class="update-cart-button check-out-button" asp-action="CheckOut" asp-controller="OrderOnline">Check Out</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,53 @@
+﻿@model IEnumerable<OrderHistory>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="cart-container">
+    <h1>
+        Order History
+    </h1>
+    <div class="cart-table">
+        @if (Model.Count() == 0)
+        {
+            <h1>
+                You are not making any purchase yet.
+            </h1>
+        }
+        else
+        {
+            <table class="table table-container">
+                <thead>
+                    <tr>
+                        <th scope="col">Transaction ID</th>
+                        <th scope="col">Transaction Date</th>
+                        <th scope="col">Number of Items</th>
+                        <th scope="col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="product-name">
+                                <a>@(item.Id + 100000)</a>
+                            </td>
+                            <td class="product-price">
+                                <a>@item.TransactionDate</a>
+                            </td>
+                            <td class="product-quantity">
+                                <a>@item.NumberOfItems</a>
+                            </td>
+                            <td class="product-subtotal">
+                                <a>₱@item.Total</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+

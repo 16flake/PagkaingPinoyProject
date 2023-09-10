@@ -1,0 +1,31 @@
+﻿@using PagkaingPinoy.ViewModel;
+@model CartViewModel
+
+<div class="form-class position-relative">
+    <form method="post" asp-action="AddToCart" class="form-container position-absolute top-50 start-50 translate-middle">
+        <div class="single-style mb-3">
+            <label asp-for="DishName">Dish Name</label>
+            <input type="text" asp-for="DishName" placeholder="Enter dish name" readonly>
+        </div>
+
+        <div class="single-style mb-3">
+            <label asp-for="Price">Price</label>
+            <div class="flex">
+                <span class="currency">₱</span>
+                <input type="text" asp-for="Price" placeholder="Enter price" readonly>
+            </div>
+        </div>
+
+        <div class="single-style quantity-style mb-3">
+            <label asp-for="Quantity">Count</label>
+            <input asp-for="Quantity">
+        </div>
+
+        <div class="single-style mb-3">
+            <input hidden asp-for="Subtotal" readonly>
+        </div>
+
+        <button type="button" class="button-submit btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="button-submit btn btn-primary">Add to cart</button>
+    </form>
+</div>

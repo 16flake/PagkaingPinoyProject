@@ -1,0 +1,114 @@
+﻿@model IEnumerable<Menu>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="menu-container">
+    <div class="menu-banner-container">
+        <div class="menu-banner position-relative">
+            <h1 class="position-absolute top-50 start-50 translate-middle">
+                Menu
+            </h1>
+        </div>
+@*        <div class="categories-container">
+            <input type="radio" class="btn-check" name="options-base" id="option1" autocomplete="off" checked>
+            <label class="btn" for="option1">All</label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option2" autocomplete="off">
+            <label class="btn" for="option2">Starter</label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option3" autocomplete="off">
+            <label class="btn" for="option3">Main</label>
+
+            <input type="radio" class="btn-check" name="options-base" id="option4" autocomplete="off">
+            <label class="btn" for="option4">Dessert</label>
+        </div>*@
+    </div>
+
+    <div class="menu-dishes-container">
+        <div class="starter-container single-container">
+            <h2>
+                Starter
+            </h2>
+            @foreach (var item in Model)
+            {
+                @if(item.Category == "Starter")
+                {
+                    <div class="dish-container">
+                        <span class="dish-price">₱@item.Price</span>
+                        <h3 class="dish-name">
+                            @item.DishName
+                        </h3>
+                        <p class="dish-description">
+                            @item.Description
+                        </p>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="main-container single-container">
+            <h2>
+                Main
+            </h2>
+            @foreach (var item in Model)
+            {
+                @if (item.Category == "Main")
+                {
+                    <div class="dish-container">
+                        <span class="dish-price">₱@item.Price</span>
+                        <h3 class="dish-name">
+                            @item.DishName
+                        </h3>
+                        <p class="dish-description">
+                            @item.Description
+                        </p>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="sideDish-container single-container">
+            <h2>
+                Side Dish
+            </h2>
+            @foreach (var item in Model)
+            {
+                @if (item.Category == "SideDish")
+                {
+                    <div class="dish-container">
+                        <span class="dish-price">₱@item.Price</span>
+                        <h3 class="dish-name">
+                            @item.DishName
+                        </h3>
+                        <p class="dish-description">
+                            @item.Description
+                        </p>
+                    </div>
+                }
+            }
+        </div>
+
+        <div class="dessert-container single-container">
+            <h2>
+                Dessert
+            </h2>
+            @foreach (var item in Model)
+            {
+                @if (item.Category == "Dessert")
+                {
+                    <div class="dish-container">
+                        <span class="dish-price">₱@item.Price</span>
+                        <h3 class="dish-name">
+                            @item.DishName
+                        </h3>
+                        <p class="dish-description">
+                            @item.Description
+                        </p>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>

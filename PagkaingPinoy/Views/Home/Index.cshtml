@@ -1,0 +1,54 @@
+﻿@{
+    
+}
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            @*<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>*@
+            <img class="carousel-image" src="/img/picture-1.jpg" />
+            <div class="container">
+                <div class="carousel-caption position-absolute top-50 start-50 translate-middle">
+                    <h1>Pagkaing Pinoy Restaurant</h1>
+                    <p>A place for an authentic filipino cuisine. A place where you can eat traditional and culture base filipino food that carries hundred years of Philippine history.</p>
+                    <a class="carousel-button" asp-area="" asp-controller="Menu" asp-action="Index">View Menu</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            @*<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>*@
+            <img class="carousel-image" src="/img/welcome-picture.jpg" />
+            <div class="container">
+                <div class="carousel-caption position-absolute top-50 start-50 translate-middle">
+                    <h1>Eat With Us</h1>
+                    <p>View and taste our mouth watering dishesh. Order now and experience the taste of Filipino culture and tradition.</p>
+                    @*<p class="carousel-button"><a asp-area="" asp-controller="OrderOnline" asp-action="Index">Order Now</a></p>*@
+                    <a class="carousel-button" asp-area="" asp-controller="OrderOnline" asp-action="Index">Order Online</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            @*<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)" /></svg>*@
+            <img class="carousel-image" src="/img/picture-2.jpg" />
+            <div class="container">
+                <div class="carousel-caption position-absolute top-50 start-50 translate-middle">
+                    <h1>Location & Direction</h1>
+                    <p>Get in touch with us or view our address and opening hours.</p>
+                    <a class="carousel-button" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
